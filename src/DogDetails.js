@@ -8,6 +8,8 @@ import { useParams } from "react-router-dom";
  */
 
 function DogDetails({ dogs }) {
+  console.log("in DogDetails")
+
   const { name } = useParams();
   const dog = dogs.find(d => d.name = name);
 

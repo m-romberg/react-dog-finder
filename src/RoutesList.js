@@ -10,7 +10,8 @@ import DogDetails from "./DogDetails";
  * App => RoutesList
  */
 
-function RoutesList() {
+function RoutesList({ handleData }) {
+  console.log("in RoutesList")
 
   return (
     <div className="RoutesList">
