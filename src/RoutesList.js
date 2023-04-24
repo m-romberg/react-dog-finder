@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import DogList from "./DogList";
 import DogDetails from "./DogDetails";
 
@@ -13,10 +13,11 @@ import DogDetails from "./DogDetails";
 function RoutesList() {
 
   return (
-    <div className="Routes">
+    <div className="RoutesList">
       <Routes>
         <Route element={<DogList />} path="/" />
         <Route element={<DogDetails />} path="/dogs/:name" />
+        <Route element={<Navigate to="/dogs" />} path="*" />
       </Routes>
     </div>
   );
