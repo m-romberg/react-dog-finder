@@ -1,25 +1,25 @@
 
 /**
  * DogList
- * Make ajax request to get all dogs
+ *
+ *
  *
  *
  */
 
 
-function DogList () {
+function DogList({ dogs }) {
 
     console.log('in DogList: ');
 
-    // async function getDogs () {
-    //     const result = await axios.get(DOGS_API_URL);
-    //     console.log('result:; ' ,result); 
-    //     handleData(result.data);
-    // }
-   
     return (
         <div className="DogList">
-            
+            {dogs.map((d, i) => (
+                <div key={i}>
+                    <h1> {d.name} </h1>
+                    <img src={`/${d.src}.jpg`} alt={d.src}></img>
+                </div>
+            ))}
         </div>
     );
 }

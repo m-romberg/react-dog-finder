@@ -7,18 +7,18 @@ import DogDetails from "./DogDetails";
  *
  * Returns list of all routes
  *
- * App => RoutesList
+ * App => RoutesList => {DogList, DogDetails, Navigate}
  */
 
-function RoutesList() {
+function RoutesList({data}) {
   console.log("in RoutesList")
 
   return (
     <div className="RoutesList">
       <Routes>
-        <Route element={<DogList />} path="/" />
-        <Route element={<DogDetails />} path="/dogs/:name" />
-        <Route element={<Navigate to="/dogs" />} path="*" />
+        <Route element={<DogList dogs={data} />} path="/" />
+        <Route element={<DogDetails dogs={data} />} path="/dogs/:name" />
+        <Route element={<Navigate to="/dogs" />} path="/*" />
       </Routes>
     </div>
   );

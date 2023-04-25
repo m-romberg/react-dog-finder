@@ -11,7 +11,7 @@ const DOGS_API_URL = "http://localhost:5001/dogs";
  * App
  *
  * State:
- *  -names
+ *  -data: [{name, age, src, facts},...]
  *
  * App => {Nav, RoutesList}
  */
@@ -36,7 +36,7 @@ function App() {
       <h1>Welcome to Dog Finder!</h1>
       <BrowserRouter>
         <Nav data={data}/>
-        <RoutesList />
+        <RoutesList data={data} />
       </BrowserRouter>
     </div>
   );

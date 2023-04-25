@@ -3,8 +3,9 @@ import { Link } from "react-router-dom";
  * Nav
  *
  * props:
- * - names: name of dogs ["Harry",...]
- * App => Nav
+ * - data: [{name, age, src, facts},...]
+ *
+ * App => Nav => Link
  */
 
 function Nav ({data}) {
