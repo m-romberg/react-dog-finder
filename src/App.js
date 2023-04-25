@@ -12,22 +12,22 @@ const DOGS_API_URL = "http://localhost:5001/dogs";
  *
  * State:
  *  -names
- * 
+ *
  * App => {Nav, RoutesList}
  */
 function App() {
   console.log("in App");
 
-  const [data, setData] = useState(null);
+  const [data, setData] = useState([]);
 
-  
+
   async function getDogs () {
     const result = await axios.get(DOGS_API_URL);
-    console.log('result:; ' ,result); 
+    console.log('result:; ' ,result);
     setData(result.data);
   }
-  
-  if (data === null) {
+
+  if (data.length=== 0) {
     getDogs();
   }
 

@@ -12,12 +12,12 @@ function Nav ({data}) {
   console.log("data:", data);
 
   const names = data.map(d => d.name);
-
+  console.log("names", names);
   return (
-  <div className="Nav">
-    {names.map((n,i) => <p><Link to={`/dogs/${n}`} key={i} /></p>)};
-  </div>
-  );
+  <nav className="Nav">
+    {names.map((n,i) => <p key={i}><Link to={`dogs/${n}`} key={i}>{n}</Link></p>)}
+  </nav>
+  )
 }
-
+//
 export default Nav;
