@@ -16,7 +16,7 @@ function RoutesList({data}) {
   return (
     <div className="RoutesList">
       <Routes>
-        <Route element={<DogList dogs={data} />} path="/" />
+        <Route element={<DogList dogs={data} />} path="/dogs" />
         <Route element={<DogDetails dogs={data} />} path="/dogs/:name" />
         <Route element={<Navigate to="/dogs" />} path="/*" />
       </Routes>
